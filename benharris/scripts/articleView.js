@@ -103,7 +103,7 @@ articleView.create = () => {
     authorUrl: $('#article-author-url').val(),
     category: $('#article-category').val(),
     body: $('#article-body').val(),
-    publishedOn: $('#article-published:checked').length. ? new Date() : null,
+    publishedOn: $('#article-published:checked').length ? new Date() : null,
   });
 
   // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
@@ -117,9 +117,9 @@ articleView.create = () => {
 };
 
 // COMMENT: Where is this function called? Why?
-// PUT YOUR RESPONSE HERE
+// It is called in the index.html after the rest of the scripts and any supporting code has been loaded into memory. This is done to initialize the index page. 
 articleView.initIndexPage = () => {
-  articles.forEach(article => $('#articles').append(article.toHtml()));
+  articles.forEach(article => $('#articles').append(article.toHtml())); // eslint-disable-line
   articleView.populateFilters();
   articleView.handleCategoryFilter();
   articleView.handleAuthorFilter();
