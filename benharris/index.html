@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/modules.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
 
     <script id="article-template" type="text/x-handlebars-template">
@@ -81,12 +82,14 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="scripts/blogArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/articleView.js"></script>
     <script>
     // COMMENT: What is this function doing? Why do we need it? Will we need one like it on the new article page that we are creating?
-    // PUT YOUR RESPONSE HERE
+    // articleView.initIndexPage() is a function defined in articleView.js that effectively triggers the script functionality. It is essentially taking the place of $(document).ready, because the function has been loaded into memory at this point, and in so doing it effectively "executes" the code in articleView.js. 
       articleView.initIndexPage()
     </script>
   </body>
